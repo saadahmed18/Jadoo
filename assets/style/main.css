@@ -18,18 +18,14 @@
   padding: 0 15px;
   margin: auto;
 }
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-  nav label,
-  nav input {
-    display: none;
-  }
-}
 @media (min-width: 768px) {
   .container {
     width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
   }
 }
 @media (min-width: 1200px) {
@@ -52,19 +48,25 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-nav {
+header nav {
   position: relative;
 }
-nav input {
+header nav input {
   appearance: none;
 }
-header .container ul {
+@media (min-width: 992px) {
+  nav label,
+  nav input {
+    display: none;
+  }
+}
+header ul {
   display: flex;
   align-items: center;
   list-style: none;
 }
 
-header .container ul li a {
+header li a {
   display: block;
   padding: 0 20px;
   font-family: "Poppins", serif;
@@ -72,35 +74,16 @@ header .container ul li a {
   font-weight: 500;
   color: var(--navbar-color);
 }
-header .container ul li .signup {
+header li .signup {
   border: 1px solid var(--navbar-color);
   border-radius: 5px;
   padding: 4px 10px;
 }
-header .container ul li select {
+header li select {
   border: none;
   outline: none;
   background-color: transparent;
   padding: 0 20px;
-}
-@media (max-width: 991px) {
-  header .container ul {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: white;
-  }
-  nav input:checked + ul {
-    display: block;
-  }
-  header .container ul li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--navbar-color);
-  }
-  header .container ul li a {
-    padding: 0;
-  }
 }
 section {
   padding: 75px 0;
@@ -113,13 +96,13 @@ section {
 .content {
   width: 50%;
 }
-.hero .container .content .pr-top {
+.hero .content .pr-top {
   font-family: "Poppins", serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--text-hero-color);
 }
-.hero .container .content h1 {
+h1 {
   font-family: "Volkhov", serif;
   font-size: 68px;
   font-weight: 700;
@@ -128,17 +111,19 @@ section {
   margin: 25px 0;
   color: var(--title-hero-color);
 }
-.hero .container .content .pr-bottom {
+.hero .content .pr-bottom {
   font-family: "Poppins", serif;
   color: var(--main-title-and-text-section-color);
 }
-.hero .container .content .btn {
+.hero .content .btn {
+  display: inline-block;
   padding: 20px;
   border-radius: 10px;
   color: white;
   background-color: var(--link-hero-color);
 }
-.hero .container .content .play-demo {
+.hero .content .play-demo {
+  display: inline-block;
   font-family: "Poppins", serif;
   font-size: 17px;
   font-weight: 500;
@@ -149,4 +134,31 @@ section {
   top: 0;
   right: 0;
   z-index: -1;
+}
+@media (max-width: 991px) {
+  header ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+  }
+  header nav input:checked + ul {
+    display: block;
+  }
+  header li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--navbar-color);
+  }
+  header li a {
+    padding: 0;
+  }
+  h1 {
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 55px;
+  }
+  .images {
+    display: none;
+  }
 }
