@@ -1,1 +1,15 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --navbar-color: #212832;
+  --text-hero-color: #df6951;
+  --title-hero-color: #181e4b;
+  --link-hero-color: #f1a501;
+  --main-title-and-text-section-color: #5e6282;
+  --title-section-color: #14183e;
+  --small-title-color: #1e1d4c;
+  --best-flight-postion-color: #df6951;
+}
