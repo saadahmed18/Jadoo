@@ -8,6 +8,7 @@
   --text-hero-color: #df6951;
   --title-hero-color: #181e4b;
   --link-hero-color: #f1a501;
+  --play-demo-color: #686d77;
   --main-title-and-text-section-color: #5e6282;
   --title-section-color: #14183e;
   --small-title-color: #1e1d4c;
@@ -21,10 +22,10 @@
   .container {
     width: 970px;
   }
-  nav label {
+  nav label,
+  nav input {
     display: none;
   }
-
 }
 @media (min-width: 768px) {
   .container {
@@ -44,6 +45,7 @@ img {
 }
 header {
   padding: 47px 0;
+  border-bottom: 1px solid black;
 }
 header .container {
   display: flex;
@@ -56,12 +58,12 @@ nav {
 nav input {
   appearance: none;
 }
-
 header .container ul {
   display: flex;
   align-items: center;
   list-style: none;
 }
+
 header .container ul li a {
   display: block;
   padding: 0 20px;
@@ -70,7 +72,6 @@ header .container ul li a {
   font-weight: 500;
   color: var(--navbar-color);
 }
-
 header .container ul li .signup {
   border: 1px solid var(--navbar-color);
   border-radius: 5px;
@@ -100,4 +101,52 @@ header .container ul li select {
   header .container ul li a {
     padding: 0;
   }
+}
+section {
+  padding: 75px 0;
+}
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content {
+  width: 50%;
+}
+.hero .container .content .pr-top {
+  font-family: "Poppins", serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-hero-color);
+}
+.hero .container .content h1 {
+  font-family: "Volkhov", serif;
+  font-size: 68px;
+  font-weight: 700;
+  line-height: 89px;
+  letter-spacing: -4%;
+  margin: 25px 0;
+  color: var(--title-hero-color);
+}
+.hero .container .content .pr-bottom {
+  font-family: "Poppins", serif;
+  color: var(--main-title-and-text-section-color);
+}
+.hero .container .content .btn {
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  background-color: var(--link-hero-color);
+}
+.hero .container .content .play-demo {
+  font-family: "Poppins", serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--play-demo-color);
+}
+.images .blob {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
 }
