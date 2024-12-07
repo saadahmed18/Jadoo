@@ -39,6 +39,23 @@ a {
 img {
   max-width: 100%;
 }
+.title {
+  text-align: center;
+}
+.title h2 {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--main-title-and-text-section-color);
+}
+.title h3 {
+  font-family: "Volkhov", serif;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--title-section-color);
+}
 header {
   padding: 47px 0;
   border-bottom: 1px solid black;
@@ -65,7 +82,22 @@ header ul {
   align-items: center;
   list-style: none;
 }
-
+@media (max-width: 991px) {
+  header ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+  }
+  header nav input:checked + ul {
+    display: block;
+  }
+  header li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--navbar-color);
+  }
+}
 header li a {
   display: block;
   padding: 0 20px;
@@ -93,41 +125,46 @@ section {
   justify-content: space-between;
   align-items: center;
 }
-.content {
-  width: 50%;
+@media (min-width: 992px) {
+  .hero .info {
+    width: 50%;
+  }
 }
-.hero .content .pr-top {
+.hero .info .welcome-message {
   font-family: "Poppins", serif;
   font-size: 20px;
   font-weight: 700;
   color: var(--text-hero-color);
 }
-h1 {
+.hero h1 {
   font-family: "Volkhov", serif;
   font-size: 68px;
   font-weight: 700;
   line-height: 89px;
-  letter-spacing: -4%;
+  letter-spacing: -4px;
   margin: 25px 0;
   color: var(--title-hero-color);
 }
-.hero .content .pr-bottom {
+.hero .info .description {
   font-family: "Poppins", serif;
   color: var(--main-title-and-text-section-color);
 }
-.hero .content .btn {
+.hero .info .btn {
   display: inline-block;
   padding: 20px;
   border-radius: 10px;
   color: white;
   background-color: var(--link-hero-color);
 }
-.hero .content .play-demo {
+.hero .info .play-demo {
   display: inline-block;
   font-family: "Poppins", serif;
   font-size: 17px;
   font-weight: 500;
   color: var(--play-demo-color);
+}
+.images {
+  width: 50%;
 }
 .images .blob {
   position: absolute;
@@ -136,29 +173,100 @@ h1 {
   z-index: -1;
 }
 @media (max-width: 991px) {
-  header ul {
-    display: none;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: white;
-  }
-  header nav input:checked + ul {
-    display: block;
-  }
-  header li {
-    padding: 8px 0;
-    border-bottom: 1px solid var(--navbar-color);
-  }
-  header li a {
-    padding: 0;
-  }
-  h1 {
+  .hero h1 {
     font-size: 45px;
     font-weight: 700;
     line-height: 55px;
   }
-  .images {
+  .hero .images {
     display: none;
   }
+}
+.services .all-services {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 991px) {
+  .services .all-services {
+    justify-content: center;
+    gap: 35px;
+  }
+}
+.service-calculated-weather {
+  width: 285px;
+  text-align: center;
+}
+.service-calculated-weather h4 {
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 40px 0 15px 0;
+}
+.service-calculated-weather p {
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--main-title-and-text-section-color);
+}
+.service-best-flights {
+  width: 285px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 1.85px 3.15px 0px #0000005a;
+  padding: 15px;
+  border-radius: 36px;
+}
+.service-best-flights::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -35px;
+  width: 100px;
+  height: 100px;
+  z-index: -1;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 10px;
+  background-color: var(--best-flight-postion-color);
+}
+.service-best-flights h4 {
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding-bottom: 15px;
+}
+.service-best-flights p {
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--main-title-and-text-section-color);
+}
+.service-local-events {
+  width: 285px;
+  text-align: center;
+}
+.service-local-events h4 {
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 40px 0 15px 0;
+}
+.service-local-events p {
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--main-title-and-text-section-color);
+}
+.service-customization {
+  width: 285px;
+  text-align: center;
+}
+.service-customization h4 {
+  font-family: "Open Sans", serif;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 40px 0 15px 0;
+}
+.service-customization p {
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--main-title-and-text-section-color);
 }
