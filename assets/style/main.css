@@ -39,23 +39,6 @@ a {
 img {
   max-width: 100%;
 }
-.title {
-  text-align: center;
-}
-.title h2 {
-  font-family: "Poppins", serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--main-title-and-text-section-color);
-}
-.title h3 {
-  font-family: "Volkhov", serif;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 40px;
-  color: var(--title-section-color);
-}
 header {
   padding: 47px 0;
   border-bottom: 1px solid black;
@@ -182,6 +165,23 @@ section {
     display: none;
   }
 }
+.title {
+  text-align: center;
+}
+.title h2 {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--main-title-and-text-section-color);
+}
+.title h3 {
+  font-family: "Volkhov", serif;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: var(--title-section-color);
+}
 .services .all-services {
   display: flex;
   justify-content: space-between;
@@ -216,6 +216,7 @@ section {
   box-shadow: 0px 1.85px 3.15px 0px #0000005a;
   padding: 15px;
   border-radius: 36px;
+  background-color: white;
 }
 .service-best-flights::before {
   content: "";
@@ -268,5 +269,48 @@ section {
 .service-customization p {
   font-weight: 500;
   line-height: 26px;
+  color: var(--main-title-and-text-section-color);
+}
+.destinations .all-destinations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (max-width: 991px) {
+  .destinations .all-destinations {
+    justify-content: center;
+  }
+}
+.all-destinations .destination {
+  flex-basis: 300px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 24px;
+  box-shadow: 0px 1.85px 3.15px 0px #0000005a;
+  background-color: white;
+}
+.destination img {
+  border-radius: 24px;
+}
+.destination .description {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+.destination .description h4,
+.destination .description span {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-title-and-text-section-color);
+}
+.destination .number-of-days {
+  display: flex;
+  gap: 25px;
+  padding: 10px;
+}
+.destination .number-of-days span {
+  font-weight: 500;
   color: var(--main-title-and-text-section-color);
 }
