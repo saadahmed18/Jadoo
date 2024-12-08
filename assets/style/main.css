@@ -89,7 +89,7 @@ header li a {
   font-weight: 500;
   color: var(--navbar-color);
 }
-header li .signup {
+header li .button {
   border: 1px solid var(--navbar-color);
   border-radius: 5px;
   padding: 4px 10px;
@@ -182,29 +182,29 @@ section {
   margin-bottom: 40px;
   color: var(--title-section-color);
 }
-.services .all-services {
+.best-services .services {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
 @media (max-width: 991px) {
-  .services .all-services {
+  .best-services .services {
     justify-content: center;
     gap: 35px;
   }
 }
-.service-calculated-weather {
+.service {
   width: 285px;
   text-align: center;
 }
-.service-calculated-weather h4 {
+.service h4 {
   font-family: "Open Sans", serif;
   font-size: 20px;
   font-weight: 600;
   padding: 40px 0 15px 0;
 }
-.service-calculated-weather p {
+.service p {
   font-weight: 500;
   line-height: 26px;
   color: var(--main-title-and-text-section-color);
@@ -241,48 +241,18 @@ section {
   line-height: 26px;
   color: var(--main-title-and-text-section-color);
 }
-.service-local-events {
-  width: 285px;
-  text-align: center;
-}
-.service-local-events h4 {
-  font-family: "Open Sans", serif;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 40px 0 15px 0;
-}
-.service-local-events p {
-  font-weight: 500;
-  line-height: 26px;
-  color: var(--main-title-and-text-section-color);
-}
-.service-customization {
-  width: 285px;
-  text-align: center;
-}
-.service-customization h4 {
-  font-family: "Open Sans", serif;
-  font-size: 20px;
-  font-weight: 600;
-  padding: 40px 0 15px 0;
-}
-.service-customization p {
-  font-weight: 500;
-  line-height: 26px;
-  color: var(--main-title-and-text-section-color);
-}
-.destinations .all-destinations {
+.top-destinations .destinations {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 20px;
 }
 @media (max-width: 991px) {
-  .destinations .all-destinations {
+  .top-destinations .destinations {
     justify-content: center;
   }
 }
-.all-destinations .destination {
+.destinations .destination {
   flex-basis: 300px;
   padding: 10px;
   text-align: center;
@@ -305,66 +275,73 @@ section {
   font-weight: 500;
   color: var(--main-title-and-text-section-color);
 }
-.destination .number-of-days {
+.destination .trip-days {
   display: flex;
   gap: 25px;
   padding: 10px;
 }
-.destination .number-of-days span {
+.destination .trip-days span {
   font-weight: 500;
   color: var(--main-title-and-text-section-color);
 }
-.title-booking-flights h2 {
-  font-family: "Poppins", serif;
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 10px;
-  color: var(--main-title-and-text-section-color);
+.booking-flights .title {
+  text-align: left;
 }
-.title-booking-flights h3 {
-  font-family: "Volkhov", serif;
-  font-size: 50px;
-  font-weight: 700;
-  color: var(--title-section-color);
-}
-.all-info-flights {
+.flights-info {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 991px) {
-  .title-booking-flights {
+  .booking-flights .title {
     text-align: center;
   }
-  .all-info-flights {
+  .flights-info {
     justify-content: center;
   }
 }
-.procedures {
+.booking-steps {
   padding-top: 40px;
 }
-.procedures .card {
+.booking-steps .choose-destination,
+.make-payment,
+.reach-airport {
   display: flex;
   align-items: center;
   margin-bottom: 48px;
 }
-.procedures .card img {
+.booking-steps .choose-destination img,
+.make-payment img,
+.reach-airport img {
   padding: 25px;
   border-radius: 26px;
   background-color: var(--link-hero-color);
 }
-.procedures .card .info {
+.make-payment img {
+  background-color: #f15a2b;
+}
+.reach-airport img {
+  background-color: #006380;
+}
+.booking-steps .choose-destination .info,
+.make-payment .info,
+.reach-airport .info {
   padding-left: 25px;
 }
-.card .info h4 {
+.choose-destination .info h4,
+.make-payment .info h4,
+.reach-airport .info h4 {
   font-family: "Poppins", serif;
   font-weight: 700;
   color: var(--main-title-and-text-section-color);
 }
-.card .info p {
+.choose-destination .info p,
+.make-payment .info p,
+.reach-airport .info p {
   color: var(--main-title-and-text-section-color);
 }
+
 .trips {
   position: relative;
 }
@@ -375,7 +352,7 @@ section {
   box-shadow: 0px 1.85px 3.15px 0px #0000005a;
   background-color: white;
 }
-.trips .trip .image-main {
+.trips .trip > img {
   width: 100%;
 }
 .trip h4 {
@@ -412,7 +389,7 @@ section {
   color: var(--main-title-and-text-section-color);
   padding-left: 10px;
 }
-.moscow {
+.ongoing-city {
   display: flex;
   gap: 10px;
   padding: 25px;
@@ -423,29 +400,35 @@ section {
   box-shadow: 0px 1.85px 3.15px 0px #0000005a;
   background-color: white;
 }
-.moscow img:first-child {
+@media (max-width: 1344px) {
+  .ongoing-city {
+    position: static;
+    margin-top: 50px;
+  }
+}
+.ongoing-city img:first-child {
   width: 75px;
   height: 75px;
   border-radius: 50%;
 }
-.moscow span:first-child {
+.ongoing-city span:first-child {
   font-family: "Poppins", serif;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -1px;
   color: var(--main-title-and-text-section-color);
 }
-.moscow .info h4 {
+.ongoing-city .info h4 {
   font-family: "Poppins", serif;
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 10px;
 }
-.moscow .info p {
+.ongoing-city .info p {
   font-family: "Poppins", serif;
   font-size: 14px;
   font-weight: 500;
 }
-.moscow .info p span {
+.ongoing-city .info p span {
   color: #8a79df;
 }
