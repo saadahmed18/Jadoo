@@ -314,3 +314,138 @@ section {
   font-weight: 500;
   color: var(--main-title-and-text-section-color);
 }
+.title-booking-flights h2 {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--main-title-and-text-section-color);
+}
+.title-booking-flights h3 {
+  font-family: "Volkhov", serif;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--title-section-color);
+}
+.all-info-flights {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 991px) {
+  .title-booking-flights {
+    text-align: center;
+  }
+  .all-info-flights {
+    justify-content: center;
+  }
+}
+.procedures {
+  padding-top: 40px;
+}
+.procedures .card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+.procedures .card img {
+  padding: 25px;
+  border-radius: 26px;
+  background-color: var(--link-hero-color);
+}
+.procedures .card .info {
+  padding-left: 25px;
+}
+.card .info h4 {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  color: var(--main-title-and-text-section-color);
+}
+.card .info p {
+  color: var(--main-title-and-text-section-color);
+}
+.trips {
+  position: relative;
+}
+.trips .trip {
+  flex-basis: 370px;
+  padding: 25px;
+  border-radius: 24px;
+  box-shadow: 0px 1.85px 3.15px 0px #0000005a;
+  background-color: white;
+}
+.trips .trip .image-main {
+  width: 100%;
+}
+.trip h4 {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 26px;
+}
+.trip .history {
+  display: block;
+  margin-top: 13px;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  color: var(--main-title-and-text-section-color);
+}
+.trip .icons {
+  display: flex;
+  margin: 21px 0 30px 0;
+  gap: 20px;
+}
+.trip .icons img {
+  display: block;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.11);
+}
+.pepole-going {
+  display: flex;
+  justify-content: space-between;
+}
+.pepole-going .info span {
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  color: var(--main-title-and-text-section-color);
+  padding-left: 10px;
+}
+.moscow {
+  display: flex;
+  gap: 10px;
+  padding: 25px;
+  border-radius: 18px;
+  position: absolute;
+  top: 46%;
+  right: -95px;
+  box-shadow: 0px 1.85px 3.15px 0px #0000005a;
+  background-color: white;
+}
+.moscow img:first-child {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+.moscow span:first-child {
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  color: var(--main-title-and-text-section-color);
+}
+.moscow .info h4 {
+  font-family: "Poppins", serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.moscow .info p {
+  font-family: "Poppins", serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+.moscow .info p span {
+  color: #8a79df;
+}
